@@ -1,0 +1,97 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "com.acme.employees",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.16.5",
+            "toolsId": "b046e71e-2964-457e-8257-8aa8b0a22df6"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "dependencies": {
+            "minUI5Version": "1.133.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.acme.employees.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "com.acme.employees.view",
+                "async": true,
+                "viewPath": "com.acme.employees.view"
+            },
+            "routes": [
+                {
+                    "name": "RouteMaster",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetMaster"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetMaster": {
+                    "id": "Master",
+                    "name": "Master"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.acme.employees.view.App",
+            "type": "XML",
+            "id": "App"
+        }
+    }
+}
