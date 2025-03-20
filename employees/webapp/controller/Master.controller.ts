@@ -8,6 +8,9 @@ import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import Table from "sap/m/Table";
 import ListBinding from "sap/ui/model/ListBinding";
+import Event from "sap/ui/base/Event";
+import ObjectListItem from "sap/m/ObjectListItem";
+import Context from "sap/ui/model/Context";
 
 /**
  * @namespace com.acme.employees.controller
@@ -84,5 +87,17 @@ export default class Master extends BaseController {
 
         // Execute search again
         this.onFilterBarSearch(event);
+    }
+
+    // Navegato to details
+    public onNavToDetails(event: Event): void {
+        const item = <ObjectListItem>event.getSource();
+        const bindingContext = <Context>(item.getBindingContext("employees"));
+        const id = bindingContext.getProperty("EmployeeID");
+
+        const router = this.getRouter();
+        router.navTo("RouteDetails", {
+            id: parseInt(id) - 1// Atributo que se le dió al parámetro en el enrutamiento del manifest.json ("pattern": "Employees({id})")
+        });
     }
 }

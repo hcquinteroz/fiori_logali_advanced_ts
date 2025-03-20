@@ -79,12 +79,35 @@
                     "target": [
                         "TargetMaster"
                     ]
+                },
+                {
+                    "name": "RouteDetails",
+                    "pattern": "Employees({id})",
+                    "target": [
+                        "TargetMaster",
+                        "TargetDetails"
+                    ]
                 }
             ],
             "targets": {
+                "TargetContent": {
+                    "id": "container-fcl",
+                    "name": "Container"
+                },
                 "TargetMaster": {
+                    "parent": "TargetContent",
+                    "controlId": "container-fcl",
+                    "controlAggregation": "beginColumnPages",
                     "id": "Master",
                     "name": "Master"
+                },
+                "TargetDetails": {
+                    "parent": "TargetContent",
+                    "controlId": "container-fcl",
+                    "controlAggregation": "midColumnPages",
+                    "id": "Details",
+                    "name": "Details"
+
                 }
             }
         },
