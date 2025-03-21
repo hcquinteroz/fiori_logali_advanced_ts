@@ -97,7 +97,7 @@ export default class Master extends BaseController {
 
         const router = this.getRouter();
         router.navTo("RouteDetails", {
-            id: parseInt(id) - 1// Atributo que se le dió al parámetro en el enrutamiento del manifest.json ("pattern": "Employees({id})")
+            index: parseInt(id) - 1 // Atributo que se le dió al parámetro en el enrutamiento del manifest.json ("pattern": "Employees({index})")
         });
     }
 }
