@@ -13,19 +13,19 @@
                 <uxap:snappedContent>
                 </uxap:snappedContent>
                 <uxap:expandedHeading>
-                    <Title text="{i18n>details}" />
+                    <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
                 </uxap:expandedHeading>
                 <uxap:snappedHeading>
                     <FlexBox fitContainer="true" alignItems="Center">
-                        <Title text="{i18n>details}" />
+                        <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
                     </FlexBox>
                 </uxap:snappedHeading>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
-        <uxap:headerContent>
+<!--        <uxap:headerContent>
         </uxap:headerContent>
         <uxap:sections>
-        </uxap:sections>
+        </uxap:sections> -->
     </uxap:ObjectPageLayout>
 
 </mvc:View>

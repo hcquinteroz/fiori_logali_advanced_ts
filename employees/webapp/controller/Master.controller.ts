@@ -19,15 +19,7 @@ export default class Master extends BaseController {
 
     /*eslint-disable @typescript-eslint/no-empty-function*/
     public onInit(): void {
-        this.loadEmployees();
         this.loadCountries();
-    }
-
-    // Load employees Model on the view
-    private loadEmployees(): void {
-        const model = new JSONModel();
-        model.loadData("../model/Employees.json");
-        this.setModel(model, "employees");
     }
 
     // Load countries model on the view
