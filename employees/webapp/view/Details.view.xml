@@ -9,8 +9,54 @@
         <uxap:headerTitle>
             <uxap:ObjectPageDynamicHeaderTitle >
                 <uxap:expandedContent>
+                    <HBox>
+                        <HBox justifyContent="SpaceAround"
+                              width="100%">
+                            <VBox width="6.5rem"
+                                  alignItems="Center"
+                                  justifyContent="Center">
+                                <Label text="{i18n>country}:" class="boldElement" />
+                                <Text text="{employees>Country}" />
+                            </VBox>
+                            <VBox width="6.5rem"
+                                  alignItems="Center"
+                                  justifyContent="Center">
+                                <Label text="{i18n>city}:" class="boldElement" />
+                                <Text text="{employees>City}" />
+                            </VBox>
+                            <VBox width="6.5rem"
+                                 alignItems="Center"
+                                 justifyContent="Center">
+                                <Label text="{i18n>postalCode}:" class="boldElement" />
+                                <Text text="{employees>PostalCode}" />
+                            </VBox>
+                        </HBox>
+                    </HBox>
                 </uxap:expandedContent>
                 <uxap:snappedContent>
+                    <HBox>
+                        <HBox justifyContent="SpaceAround"
+                              width="100%">
+                            <VBox width="6.5rem"
+                                  alignItems="Center"
+                                  justifyContent="Center">
+                                <Label text="{i18n>country}:" class="boldElement" />
+                                <Text text="{employees>Country}" />
+                            </VBox>
+                            <VBox width="6.5rem"
+                                  alignItems="Center"
+                                  justifyContent="Center">
+                                <Label text="{i18n>city}:" class="boldElement" />
+                                <Text text="{employees>City}" />
+                            </VBox>
+                            <VBox width="6.5rem"
+                                 alignItems="Center"
+                                 justifyContent="Center">
+                                <Label text="{i18n>postalCode}:" class="boldElement" />
+                                <Text text="{employees>PostalCode}" />
+                            </VBox>
+                        </HBox>
+                    </HBox>
                 </uxap:snappedContent>
                 <uxap:expandedHeading>
                     <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
