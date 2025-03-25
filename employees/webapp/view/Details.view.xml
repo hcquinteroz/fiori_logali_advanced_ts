@@ -20,6 +20,11 @@
                         <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
                     </FlexBox>
                 </uxap:snappedHeading>
+                <uxap:actions>
+                    <Button icon="sap-icon://decline"
+                            press="onClosePress"
+                            type="Emphasized" />
+                </uxap:actions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
 <!--        <uxap:headerContent>

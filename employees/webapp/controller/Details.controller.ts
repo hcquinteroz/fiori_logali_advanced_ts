@@ -26,4 +26,11 @@ export default class Details extends BaseController {
             model: 'employees'
         });
     }
+
+    public onClosePress(): void {
+        const router = this.getRouter();
+        const viewModel = <JSONModel>this.getModel("view");
+        viewModel.setProperty("/layout", "OneColumn");
+        router.navTo("RouteMaster");
+    }
 }
