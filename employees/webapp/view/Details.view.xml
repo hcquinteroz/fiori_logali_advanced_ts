@@ -67,16 +67,29 @@
                     </FlexBox>
                 </uxap:snappedHeading>
                 <uxap:actions>
+                    <Button text="{i18n>create}"
+                            press="onCreatePress"
+                            type="Emphasized" 
+                            width="6rem"/>
                     <Button icon="sap-icon://decline"
                             press="onClosePress"
-                            type="Emphasized" />
+                            type="Reject" />
                 </uxap:actions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
 <!--        <uxap:headerContent>
-        </uxap:headerContent>
+        </uxap:headerContent>-->
         <uxap:sections>
-        </uxap:sections> -->
+            <uxap:ObjectPageSection>
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>incidence}">
+                        <uxap:blocks>
+                            <Panel id="tableIncidence" />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections> 
     </uxap:ObjectPageLayout>
 
 </mvc:View>
