@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Table items="{employees>Orders}">
+        <columns>
+            <Column>
+                <Text text="{i18n>orderID}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>freight}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>shipAddress}" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{employees>OrderID}"></Text>
+                    <Text text="{employees>Freight}"></Text>
+                    <Text text="{employees>ShipAddress}"></Text>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+
+</core:FragmentDefinition>

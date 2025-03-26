@@ -89,6 +89,16 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>
             </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection>
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>orders}">
+                        <uxap:blocks>
+                            <core:Fragment fragmentName="com.acme.employees.fragment.Orders"
+                                           type="XML" />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
         </uxap:sections> 
     </uxap:ObjectPageLayout>
 
