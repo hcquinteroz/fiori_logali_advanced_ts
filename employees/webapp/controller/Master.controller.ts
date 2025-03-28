@@ -10,7 +10,7 @@ import Table from "sap/m/Table";
 import ListBinding from "sap/ui/model/ListBinding";
 import Event from "sap/ui/base/Event";
 import ObjectListItem from "sap/m/ObjectListItem";
-import Context from "sap/ui/model/Context";
+import Context from "sap/ui/model/odata/v2/Context";
 
 /**
  * @namespace com.acme.employees.controller
@@ -84,12 +84,12 @@ export default class Master extends BaseController {
     // Navegato to details
     public onNavToDetails(event: Event): void {
         const item = <ObjectListItem>event.getSource();
-        const bindingContext = <Context>(item.getBindingContext("employees"));
+        const bindingContext = <Context>(item.getBindingContext("northwind"));
         const id = bindingContext.getProperty("EmployeeID");
 
         const router = this.getRouter();
         router.navTo("RouteDetails", {
-            index: parseInt(id) - 1 // Atributo que se le dió al parámetro en el enrutamiento del manifest.json ("pattern": "Employees({index})")
+            index: id // Atributo que se le dió al parámetro en el enrutamiento del manifest.json ("pattern": "Employees({index})")
         });
     }
 }

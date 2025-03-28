@@ -36,8 +36,8 @@ export default class Details extends BaseController {
         const view = this.getView();
 
         view?.bindElement({
-            path: '/Employees/'+index,
-            model: 'employees'
+            path: '/Employees('+index+')',
+            model: 'northwind'
         });
     }
 

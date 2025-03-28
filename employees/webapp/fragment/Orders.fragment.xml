@@ -2,7 +2,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <Table items="{employees>Orders}">
+    <Table items="{northwind>Orders}">
         <columns>
             <Column>
                 <Text text="{i18n>orderID}" />
@@ -17,9 +17,9 @@
         <items>
             <ColumnListItem>
                 <cells>
-                    <Text text="{employees>OrderID}"></Text>
-                    <Text text="{employees>Freight}"></Text>
-                    <Text text="{employees>ShipAddress}"></Text>
+                    <Text text="{northwind>OrderID}"></Text>
+                    <Text text="{northwind>Freight}"></Text>
+                    <Text text="{northwind>ShipAddress}"></Text>
                 </cells>
             </ColumnListItem>
         </items>

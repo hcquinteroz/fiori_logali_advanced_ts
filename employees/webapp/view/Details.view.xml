@@ -16,19 +16,19 @@
                                   alignItems="Center"
                                   justifyContent="Center">
                                 <Label text="{i18n>country}:" class="boldElement" />
-                                <Text text="{employees>Country}" />
+                                <Text text="{northwind>Country}" />
                             </VBox>
                             <VBox width="6.5rem"
                                   alignItems="Center"
                                   justifyContent="Center">
                                 <Label text="{i18n>city}:" class="boldElement" />
-                                <Text text="{employees>City}" />
+                                <Text text="{northwind>City}" />
                             </VBox>
                             <VBox width="6.5rem"
                                  alignItems="Center"
                                  justifyContent="Center">
                                 <Label text="{i18n>postalCode}:" class="boldElement" />
-                                <Text text="{employees>PostalCode}" />
+                                <Text text="{northwind>PostalCode}" />
                             </VBox>
                         </HBox>
                     </HBox>
@@ -41,29 +41,29 @@
                                   alignItems="Center"
                                   justifyContent="Center">
                                 <Label text="{i18n>country}:" class="boldElement" />
-                                <Text text="{employees>Country}" />
+                                <Text text="{northwind>Country}" />
                             </VBox>
                             <VBox width="6.5rem"
                                   alignItems="Center"
                                   justifyContent="Center">
                                 <Label text="{i18n>city}:" class="boldElement" />
-                                <Text text="{employees>City}" />
+                                <Text text="{northwind>City}" />
                             </VBox>
                             <VBox width="6.5rem"
                                  alignItems="Center"
                                  justifyContent="Center">
                                 <Label text="{i18n>postalCode}:" class="boldElement" />
-                                <Text text="{employees>PostalCode}" />
+                                <Text text="{northwind>PostalCode}" />
                             </VBox>
                         </HBox>
                     </HBox>
                 </uxap:snappedContent>
                 <uxap:expandedHeading>
-                    <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
+                    <Title text="{northwind>FirstName} {northwind>LastName} ({northwind>EmployeeID})" />
                 </uxap:expandedHeading>
                 <uxap:snappedHeading>
                     <FlexBox fitContainer="true" alignItems="Center">
-                        <Title text="{employees>FirstName} {employees>LastName} ({employees>EmployeeID})" />
+                        <Title text="{northwind>FirstName} {northwind>LastName} ({northwind>EmployeeID})" />
                     </FlexBox>
                 </uxap:snappedHeading>
                 <uxap:actions>

@@ -46,7 +46,7 @@
         </f:header>
         <f:content>
             <Table id="table"
-                   items="{employees>/Employees}"
+                   items="{northwind>/Employees}"
                    growing="true">
                 <columns>
                     <Column width="6rem">
@@ -69,11 +69,11 @@
                     <ColumnListItem type="Navigation"
                                     press="onNavToDetails">
                         <cells>
-                            <ObjectIdentifier title="{employees>EmployeeID}" />
-                            <Text text="{employees>FirstName} {employees>LastName}" />
-                            <Text text="{employees>Country}" />
-                            <Text text="{employees>City}" />
-                            <Text text="{employees>PostalCode}" />
+                            <ObjectIdentifier title="{northwind>EmployeeID}" />
+                            <Text text="{northwind>FirstName} {northwind>LastName}" />
+                            <Text text="{northwind>Country}" />
+                            <Text text="{northwind>City}" />
+                            <Text text="{northwind>PostalCode}" />
                         </cells>
                     </ColumnListItem>
                 </items>
