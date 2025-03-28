@@ -19,6 +19,9 @@ server:
           - url: https://services.odata.org
             authenticationType: NoAuthentication
             path: /v2
+          - url: http://erp13.sap4practice.com:9037
+            client: '001'
+            path: /sap
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

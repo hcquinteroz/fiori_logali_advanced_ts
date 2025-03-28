@@ -22,6 +22,13 @@
         "settings": {
           "odataVersion": "2.0"
         }
+      },
+      "YSAPUI5_SRV_01": {
+        "uri": "/sap/opu/odata/sap/YSAPUI5_SRV_01/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
       }
     }
   },
@@ -63,6 +70,15 @@
       },
       "northwind": {
         "dataSource": "northwind",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
+      },
+      "zincidence": {
+        "dataSource": "YSAPUI5_SRV_01",
         "preload": true,
         "settings": {
           "defaultBindingMode": "TwoWay",
