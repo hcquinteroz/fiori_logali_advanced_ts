@@ -24,7 +24,8 @@
             <HBox>
                 <VBox class="sapUiSmalMarginEnd">
                     <Text text="{i18n>date}:" />
-                    <DatePicker value="{form>CreationDate}" />
+                    <!-- <DatePicker value="{form>CreationDate}" /> -->
+                    <DatePicker dateValue="{form>CreationDate}" />
                 </VBox>
                 <VBox class="sapUiSmalMarginEnd">
                     <Text text="{i18n>reason}:" />

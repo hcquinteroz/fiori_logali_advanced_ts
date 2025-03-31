@@ -88,17 +88,18 @@ export default class Details extends BaseController {
         const utils = new Utils(this);
         
         const object = {
-            url: "IncidentsSet", // Nombre de la entidad. Lo podemos ver en el metadata.xml
+            url: "/IncidentsSet", // Nombre de la entidad. Lo podemos ver en el metadata.xml
             data: {
                 SapId: utils.getEmail(),
-                EmployeeId: northwind.getProperty("EmployeeID"),
+                // EmployeeId: northwind.getProperty("EmployeeID"),
+                EmployeeId: (<number>northwind.getProperty("EmployeeID")).toString(),
                 CreationDate: form?.getProperty("CreationDate"),
                 Type: form?.getProperty("Type"),
                 Reason: form?.getProperty("Reason")
             }
         };
 
-        console.log(object);
+        await utils.crud('create', new JSONModel(object));
     }
 
     public async onDeleteIncidence(event: Button$PressEvent): Promise<void> {
