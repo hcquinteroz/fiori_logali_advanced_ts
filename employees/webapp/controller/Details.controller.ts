@@ -4,6 +4,7 @@ import JSONModel from "sap/ui/model/json/JSONModel";
 import Panel from "sap/m/Panel";
 import Button, { Button$PressEvent } from "sap/m/Button";
 import Toolbar from "sap/m/Toolbar";
+import Context from "sap/ui/model/odata/v2/Context";
 
 /**
  * @namespace com.acme.employees.controller
@@ -82,7 +83,20 @@ export default class Details extends BaseController {
         const toolBar = <Toolbar>button.getParent();
         const panel = <Panel>toolBar.getParent();
         const form = panel.getBindingContext("form");
-        console.log(form?.getObject());
+        const northwind = <Context>this.getView()?.getBindingContext("northwind");
+        
+        const object = {
+            url: "IncidentsSet", // Nombre de la entidad. Lo podemos ver en el metadata.xml
+            data: {
+                SapId: "",
+                EmployeeId: northwind.getProperty("EmployeeID"),
+                CreationDate: form?.getProperty("CreationDate"),
+                Type: form?.getProperty("Type"),
+                Reason: form?.getProperty("Reason")
+            }
+        };
+
+        console.log(object);
     }
 
     public async onDeleteIncidence(event: Button$PressEvent): Promise<void> {
