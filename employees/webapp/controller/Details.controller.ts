@@ -1,6 +1,9 @@
 import BaseController from "./BaseController";
 import {Route$PatternMatchedEvent} from "sap/ui/core/routing/Route";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import Panel from "sap/m/Panel";
+import Button, { Button$PressEvent } from "sap/m/Button";
+import Toolbar from "sap/m/Toolbar";
 
 /**
  * @namespace com.acme.employees.controller
@@ -72,5 +75,17 @@ export default class Details extends BaseController {
         });
 
         panel.addContent(this.panel);
+    }
+
+    public async onSaveIncidence(event: Button$PressEvent): Promise<void> {
+        const button = <Button>event.getSource();
+        const toolBar = <Toolbar>button.getParent();
+        const panel = <Panel>toolBar.getParent();
+        const form = panel.getBindingContext("form");
+        console.log(form?.getObject());
+    }
+
+    public async onDeleteIncidence(event: Button$PressEvent): Promise<void> {
+        
     }
 }

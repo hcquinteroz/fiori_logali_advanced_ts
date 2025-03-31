@@ -11,6 +11,13 @@
                     ${form>Type} === '3' ? 'sap-icon://error' : ''
                 }" />
                 <Title text="{i18n>incidence} ({form>Index})" />
+                <ToolbarSpacer />
+                <Button icon="sap-icon://save"
+                        press="onSaveIncidence"
+                        type="Emphasized"/>
+                <Button icon="sap-icon://delete"
+                        press="onDeleteIncidence"
+                        type="Reject"/>
             </Toolbar>
         </headerToolbar>
         <content>
