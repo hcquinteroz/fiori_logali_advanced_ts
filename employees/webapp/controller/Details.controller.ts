@@ -5,6 +5,7 @@ import Panel from "sap/m/Panel";
 import Button, { Button$PressEvent } from "sap/m/Button";
 import Toolbar from "sap/m/Toolbar";
 import Context from "sap/ui/model/odata/v2/Context";
+import Utils from "../utils/Utils";
 
 /**
  * @namespace com.acme.employees.controller
@@ -84,11 +85,12 @@ export default class Details extends BaseController {
         const panel = <Panel>toolBar.getParent();
         const form = panel.getBindingContext("form");
         const northwind = <Context>this.getView()?.getBindingContext("northwind");
+        const utils = new Utils(this);
         
         const object = {
             url: "IncidentsSet", // Nombre de la entidad. Lo podemos ver en el metadata.xml
             data: {
-                SapId: "",
+                SapId: utils.getEmail(),
                 EmployeeId: northwind.getProperty("EmployeeID"),
                 CreationDate: form?.getProperty("CreationDate"),
                 Type: form?.getProperty("Type"),
