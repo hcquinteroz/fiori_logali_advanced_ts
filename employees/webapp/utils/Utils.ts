@@ -3,6 +3,7 @@ import MessageBox from "sap/m/MessageBox";
 import Controller from "sap/ui/core/mvc/Controller";
 import UIComponent from "sap/ui/core/UIComponent";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import ODataListBinding from "sap/ui/model/odata/v2/ODataListBinding";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 
@@ -52,6 +53,24 @@ export default class Utils {
         this.model.create(url, data, {
             success: function() {
                 MessageBox.success(resourceBundle.getText("success") || 'No text defined');
+            },
+            error: function() {
+                MessageBox.error(resourceBundle.getText("error") || 'No text defined');
+            }
+        });
+    }
+
+    public async read(object?: JSONModel): Promise<void | ODataListBinding> {
+        const model = this.model;
+        const url = object?.getProperty("/url");
+        const filters = object?.getProperty("/filters");
+        const resourceBundle = this.resourceBundle;
+
+        model.read(url, {
+            filters: filters,
+            success: function(data: ODataListBinding) {
+                console.log(data);
+                // MessageBox.success(resourceBundle.getText("success") || 'No text defined');
             },
             error: function() {
                 MessageBox.error(resourceBundle.getText("error") || 'No text defined');
